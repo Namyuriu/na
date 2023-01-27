@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Relógio com imagem</title>
+  <style>
+    #clock {
+      font-size: 50px;
+      text-align: center;
+    }
+    #clock-img {
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Relógio com imagem</h1>
+  <img id="clock-img" src="path/to/Image (4).jpg" alt="Clock Image">
+  <div id="clock"></div>
+
+  <script>
+    function updateTime() {
+      var date = new Date();
+      var time = date.toLocaleTimeString();
+      document.getElementById("clock").innerHTML = time;
+    }
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
